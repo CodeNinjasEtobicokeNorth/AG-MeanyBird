@@ -13,7 +13,7 @@ public class PlayerControls : MonoBehaviour
     private Rigidbody2D rb;
     //height of the bird object on the y axis
     private float objectHeight;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,12 +37,14 @@ public class PlayerControls : MonoBehaviour
             rb.velocity = Vector2.up * velocity;
         }
     }
-//Function where the player with a object
-private void OnCollisionEnter2D(Collision2D collision)
-{ 
-    if(collision.gameObject.tag == "HighSpike" || collision.gameObject.tag == "LowSpike" || collision.gameObject.tag == "Ground")
+    //Function where the player with a object
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "HighSpike" || collision.gameObject.tag == "LowSpike" || collision.gameObject.tag == "Ground")
+        {
             //Game is at a stopping state
             Time.timeScale = 0;
+        }
     }
+
 }
