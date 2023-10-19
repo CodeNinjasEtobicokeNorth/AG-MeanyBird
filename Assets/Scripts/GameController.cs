@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    //Game Over Canvas that is used for the game
+    [Header("Game")]
     // Start is called before the first frame update
     void Start()
     {
