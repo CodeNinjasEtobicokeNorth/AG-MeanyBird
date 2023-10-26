@@ -42,9 +42,13 @@ public class PlayerControls : MonoBehaviour
     {
         if (collision.gameObject.tag == "HighSpike" || collision.gameObject.tag == "LowSpike" || collision.gameObject.tag == "Ground")
         {
+            //Game Over function is called from the game manager
+            GameObject.Find("GameController").GetComponent<GameController>().GameOver();
+
             //Game is at a stopping state
             Time.timeScale = 0;
         }
+
     }
 
 }
